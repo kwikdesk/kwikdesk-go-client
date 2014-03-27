@@ -6,6 +6,10 @@ This is a client to interact with the KwikDesk Partner Platform using the Go Lan
 
 The partner documentation can be found at [partners.kwikdesk.com](https://partners.kwikdesk.com).
 
+## Potential Package Loading Issues 
+
+If you are having issues **importing** the package, don't forget to run: `go get github.com/kwikdesk/kwikdesk-go-client`
+
 ## Usage
 
 This package is a barebone straightforward package that allows you to complete the lifecycle of a

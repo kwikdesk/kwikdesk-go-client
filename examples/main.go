@@ -1,7 +1,7 @@
 package main
 
 import (
-    "github.com/kwikdesk/kwikdesk-go-client/kwikdesk"
+    "github.com/kwikdesk/kwikdesk-go-client"
     "crypto/rand"
     "fmt"
 )
