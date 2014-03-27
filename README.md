@@ -23,7 +23,7 @@ When creating a token, we need to pass either an **application name** or if we w
 import "github.com/kwikdesk/kwikdesk-go-client"
 
 client    := kwikdesk.NewClient("") // We pass an empty token here.
-token, _  := kwikdesk.CreateToken("MyApplicationName")
+token, _  := client.CreateToken("MyApplicationName")
 ```
 
 **Make sure not to loose your token as it is not retrievable for privacy reasons**
@@ -42,7 +42,7 @@ First we are going to create a message that is searchable (Not private — **thi
 import "github.com/kwikdesk/kwikdesk-go-client"
 
 client    := kwikdesk.NewClient("token-token-token")
-message, _  := kwikdesk.Messages("Content of my message #testing", 1440, false)
+message, _  := client.Messages("Content of my message #testing", 1440, false)
 
 fmt.Printf("%v", message)
 ```
@@ -56,7 +56,7 @@ Then we want to create a message that will only be retrievable via **secure-chan
 import "github.com/kwikdesk/kwikdesk-go-client"
 
 client      := kwikdesk.NewClient("token-token-token")
-private, _  := kwikdesk.Messages("Private message. No Hashtags Required.", 1440, true)
+private, _  := client.Messages("Private message. No Hashtags Required.", 1440, true)
 
 fmt.Printf("%v", private)
 ```
@@ -72,7 +72,7 @@ that have the **private** flag set to false. You can execute a search like this:
 import "github.com/kwikdesk/kwikdesk-go-client"
 
 client     := kwikdesk.NewClient("token-token-token")
-search, _  := kwikdesk.Search("testing")
+search, _  := client.Search("testing")
 
 fmt.Printf("%v", search)
 ```
@@ -90,7 +90,7 @@ the channels. All  you have to do is:
 import "github.com/kwikdesk/kwikdesk-go-client"
 
 client      := kwikdesk.NewClient("token-token-token")
-channel, _  := kwikdesk.Channel()
+channel, _  := client.Channel()
 
 fmt.Printf("%v", channel)
 ```
